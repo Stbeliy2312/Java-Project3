@@ -2,29 +2,29 @@ package by.gomel.task2;
 
 public class Number {
 
-    protected static void getLCD(int num1, int num2) {
-        int lcd = 0;
+    protected static void getGCD(int num1, int num2) {
+        int gcd = 0;
         for (int i = 1; i <= num1 && i <= num2; i++) {
 
             if (num1 % i == 0 && num2 % i == 0) {
 
-                lcd = i;
+                gcd = i;
             }
         }
-        System.out.println(lcd);
+        System.out.println(gcd);
     }
 
 
-    protected static void getSCM(int num3, int num4) {
-        int scm;
-        if (num3 < num4) scm = num4;
-        else scm = num3;
+    protected static void getLCM(int num3, int num4) {
+        int lcm;
+        if (num3 < num4) lcm = num4;
+        else lcm = num3;
         boolean t = true;
         while (t) {
-            if ((scm % num3 == 0) && (scm % num4 == 0)) break;
-            else scm += 1;
+            if ((lcm % num3 == 0) && (lcm % num4 == 0)) break;
+            else lcm += 1;
         }
-        System.out.println(scm);
+        System.out.println(lcm);
     }
 
 }
