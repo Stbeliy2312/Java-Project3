@@ -10,11 +10,14 @@ public class Number {
                 System.out.print("odd");
             }
         }
-        if (number > 2 && number % 2 == 0 || number > 3 && number % 3 == 0 || number > 5 && number % 5 == 0 || number > 7 && number % 7 == 0
-                || number > 11 && number % 11 == 0) {
-            System.out.print(" prime number");
-        } else {
-            System.out.print(" composite number");
+        for (int i = 2; i <= (int) Math.sqrt(number); i++) {
+            if (number % i == 0) {
+                System.out.print(" composite number");
+            } else {
+                System.out.print(" prime number");
+            }
+            break;
         }
     }
+
 }

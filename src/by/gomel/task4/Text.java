@@ -5,13 +5,14 @@ public class Text {
     protected static void getNumberWords(String text, String searchingWord) {
         int numberWords = 0;
         char s;
-        if (searchingWord.equalsIgnoreCase(" ")) {
+        if (searchingWord.equals(" ")) {
             System.out.println("Error! You must enter the word!");
         } else {
             text = text.toLowerCase();
             searchingWord = searchingWord.toLowerCase();
             String[] whitespace = text.split(" ");
             for (String word : whitespace) {
+               // if (word.equalsIgnoreCase(searchingWord)){ - this more short, but then the program does not find word with symbol
                 if (word.indexOf(searchingWord) != -1 && (word.length() == searchingWord.length() || word.length() - 1 == searchingWord.length())) { //I used "word.length() - 1" because the word can be with a symbol
                     numberWords++;
                 }
